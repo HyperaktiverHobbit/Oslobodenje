@@ -1,0 +1,55 @@
+<html>
+    <head>
+<title>Oslobođenje.ba</title> 
+
+    </head>
+    <body>
+       <div style="display: flex; align-items: center; gap: 10px;">
+  <img src="0.png" height="70px" width="70px" alt="">
+  <h1>Razina mora se drastično mijenja, jesmo li svi najebali?</h1>
+</div>
+
+        <p>U posljednjih 7 dana, naučnici iz cijelog svijeta primijetili su drastične promjene u razini mora, posebno u Jadranskom moru. <br>
+Zbog globalnog zagrijavanja, razina mora se povećava već zadnjih 145 godina. <br>
+Trenutno je prosječna razina mora 21–24 cm viša nego 1880. godine.</p>
+       <p>Naučnici su primijetili da se razina mora prošle sedmice povisila za čak 2 metra – povremeno i iznenada. <br>
+To je mnoge znanstvenike dovelo u paniku, pomislili su da je to možda kraj svijeta. <br>
+Međutim, 10–20 minuta kasnije razina mora se vratila na normalu. <br>
+U kratkom roku pojavile su se brojne teorije – od podvodnih potresa do vanzemaljaca. <br>
+No, misterija je brzo razriješena. Nema razloga za brigu – sve je u redu.</p>
+
+    <h2>Možete li pogoditi što je uzrokovalo ovaj fenomen?</h2>
+    <input id="tetak" placeholder="Unesite svoj odgovor...">
+  <button onclick="myFunction()">POŠALJI</button>
+
+  <h3 id="message"></h3>
+  <p id="hint" style="color: gray;"></p>
+
+  <script>
+    var attempts = 0;
+
+    function myFunction() {
+      var odgovor = document.getElementById("tetak").value.toLowerCase().trim();
+      var message = document.getElementById("message");
+      var hint = document.getElementById("hint");
+
+      if (odgovor === "tetak") {
+        message.innerHTML = "✅ Tačno! Tetak je uzrok!";
+        hint.innerHTML = "";
+        attempts = 0;
+      } else {
+        message.innerHTML = "❌ Netačno. Pokušaj ponovo!";
+        attempts++;
+
+        if (attempts === 1) {
+          hint.innerHTML = "💡 Hint: To je živo biće prouzrokovalo.";
+        } else if (attempts === 2) {
+          hint.innerHTML = "💡 Hint: To je član porodice koji voli da pije kafu i pravi haos u luci.";
+        } else {
+          hint.innerHTML = "💡 Hint: Počinje na 't', završava na 'k'.";
+        }
+      }
+    }
+  </script>
+    </body>
+</html>
